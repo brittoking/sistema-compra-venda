@@ -1,0 +1,5 @@
+# Copie para db.properties na raiz do projeto e informe sua senha.
+# Troque public pelo schema em que as tabelas foram criadas.
+url= sua url
+user= seu nome de usuario
+password=sua senha

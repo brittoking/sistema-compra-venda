@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "https://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- A URL/credencial configurada em db.properties ou por -Ddb.* prevalece. -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/sistemaCV</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">12345</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.hbm2ddl.auto">none</property>
+        <property name="hibernate.show_sql">false</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.connection.pool_size">10</property>
+        <property name="hibernate.jdbc.time_zone">UTC</property>
+        <mapping class="br.com.unip.erp.model.Pessoa"/>
+        <mapping class="br.com.unip.erp.model.Cliente"/>
+        <mapping class="br.com.unip.erp.model.Fornecedor"/>
+        <mapping class="br.com.unip.erp.model.Produto"/>
+        <mapping class="br.com.unip.erp.model.Usuario"/>
+        <mapping class="br.com.unip.erp.model.FormaPagto"/>
+        <mapping class="br.com.unip.erp.model.Compra"/>
+        <mapping class="br.com.unip.erp.model.CompraProduto"/>
+        <mapping class="br.com.unip.erp.model.Venda"/>
+        <mapping class="br.com.unip.erp.model.VendaProduto"/>
+        <mapping class="br.com.unip.erp.model.VendaPagto"/>
+    </session-factory>
+</hibernate-configuration>
